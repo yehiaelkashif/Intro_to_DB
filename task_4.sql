@@ -1,12 +1,12 @@
 -- Query to get the full description of the books table
 SELECT 
     COLUMN_NAME,
-    DATA_TYPE,
-    CHARACTER_MAXIMUM_LENGTH,
+    COLUMN_TYPE,
     IS_NULLABLE,
-    COLUMN_DEFAULT
+    COLUMN_DEFAULT,
+    CHARACTER_MAXIMUM_LENGTH
 FROM 
     INFORMATION_SCHEMA.COLUMNS
 WHERE 
-    TABLE_NAME = 'Books' AND 
+    TABLE_NAME = 'books' AND 
     TABLE_SCHEMA = 'alx_book_store';
